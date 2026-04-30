@@ -964,8 +964,11 @@ window.addEventListener("offline", () => {
 window.addEventListener("online", () => {
   console.log("Conectado nuevamente");
 });
-  
-if ("serviceWorker" in navigator) {
+
+window.addEventListener("load", loadCart);
+window.addEventListener("beforeunload", saveCart);
+
+  if ("serviceWorker" in navigator) {
   navigator.serviceWorker.register("sw.js");
 }
 </script>
