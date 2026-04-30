@@ -957,7 +957,13 @@ if ("serviceWorker" in navigator) {
   });
 }
 */
+window.addEventListener("offline", () => {
+  alert("Sin conexión - modo offline activo");
+});
 
+window.addEventListener("online", () => {
+  console.log("Conectado nuevamente");
+});
   
 if ("serviceWorker" in navigator) {
   navigator.serviceWorker.register("sw.js");
