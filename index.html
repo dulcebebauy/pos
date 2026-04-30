@@ -844,8 +844,8 @@ function removeItem(index) {
   updateTotal();
   renderCart();
   saveCart();
-  document.getElementById("discount").value = 0;
-  document.getElementById("discountDesc").value = "";
+  //document.getElementById("discount").value = 0;
+  //document.getElementById("discountDesc").value = "";
 }
 /* -------------- LOADER --------------- */
 function showLoader() {
@@ -942,6 +942,9 @@ function clearCart() {
   renderCart();
   updatePayButtons();
   navigator.vibrate?.(30);
+
+  document.getElementById("discount").value = 0;
+  document.getElementById("discountDesc").value = "";
 
   localStorage.removeItem("carrito");
 }
