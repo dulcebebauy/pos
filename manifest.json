@@ -5,5 +5,15 @@
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#111111",
-  "icons": []
+  "icons": [
+    {
+      "src": "logo-tr-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+    {
+      "src": "logo-tr-51x512.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
 }
