@@ -844,6 +844,8 @@ function removeItem(index) {
   updateTotal();
   renderCart();
   saveCart();
+  document.getElementById("discount").value = 0;
+  document.getElementById("discountDesc").value = "";
 }
 /* -------------- LOADER --------------- */
 function showLoader() {
