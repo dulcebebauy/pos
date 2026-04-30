@@ -414,7 +414,68 @@ button {
 </head>
 <body>
 
+<body>
+<div id="loader" class="loader hidden">
+  <div class="spinner"></div>
+  <p>Procesando venta...</p>
+</div>
+<header class="header">
+  
+  <input 
+    type="text" 
+    id="search" 
+    placeholder="Buscar producto..."
+    oninput="filtrarProductos()"
+  />
+  <div id="totalBox">Total: $<span id="total">0</span></div>
 
+</header>
+
+<div class="container" id="productos"></div>
+
+<div class="cart" onclick="openCart()">🛒</div>
+
+<div class="modal" id="modal">
+  <div style="/*display:flex;*/justify-content:space-between;align-items:center;">
+    <div class="cart-header">
+      <h3>Carrito</h3>
+    
+      <button class="min-btn" onclick="toggleCart()">-</button>
+    </div>
+  </div>
+
+  <div id="items"></div>
+
+  <hr>
+  <div class="cart-total-row">
+    <h3>Total: $<span id="cartTotal">0</span></h3>
+
+    <button class="clear-icon" onclick="clearCart()" title="Vaciar carrito">
+    🗑️
+    </button>
+  </div>
+  
+  
+  <div class="discount-section">
+
+    <div class="discount-row">
+      <label>Descuento (%)</label>
+      <input type="number" id="discount" placeholder="0" min="0" max="100" oninput="updateCartTotal()" />
+    </div>
+  
+    <div class="discount-row">
+      <label>Descripción</label>
+      <input type="text" id="discountDesc" placeholder="Motivo del descuento" />
+    </div>
+
+  </div>
+  
+  <button class="pay cash" onclick="pagar('efectivo')">Efectivo</button>
+  
+  <button class="pay debit" onclick="pagar('debito')">Tarjeta Débito</button>
+  
+  <button class="pay credit" onclick="pagar('credito')">Tarjeta Crédito</button>
+</div>
 
 
 
