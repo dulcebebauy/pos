@@ -1,7 +1,7 @@
 {
   "name": "POS Cafeteria",
   "short_name": "POS",
-  "start_url": "/",
+  "start_url": "index.html",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#111111",
